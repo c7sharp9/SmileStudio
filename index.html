@@ -42,11 +42,7 @@
         .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
         .hero .scarcity { font-size: 15px; color: #7a7a8a; font-style: italic; }
         .hero-video { display: flex; align-items: center; justify-content: center; }
-        .hero-video-inner { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 60px 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; aspect-ratio: 16/10; width: 100%; }
-        .hero-video-orb { position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); filter: blur(40px); }
-        .hero-video .play-btn { width: 88px; height: 88px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; cursor: pointer; position: relative; z-index: 1; }
-        .hero-video-text { color: #fff; font-size: 20px; font-weight: 600; margin-bottom: 8px; position: relative; z-index: 1; }
-        .hero-video-subtext { color: #b8b8c8; font-size: 16px; position: relative; z-index: 1; }
+        .hero-video-inner { border-radius: 20px; position: relative; overflow: hidden; aspect-ratio: 16/9; width: 100%; }
 
         /* Bento Grid Section */
         .bento-section { padding: 100px 48px; background: #faf8f5; }
@@ -132,10 +128,9 @@
         .proof-section .video-tab.active { background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); color: #0f0a1e; opacity: 1; }
         .proof-section .video-panel { display: none; }
         .proof-section .video-panel.active { display: block; }
-        .proof-section .video-player { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); position: relative; overflow: hidden; margin-bottom: 24px; }
+        .proof-section .video-player { border-radius: 20px; position: relative; overflow: hidden; margin-bottom: 24px; max-width: 93%; margin-left: auto; margin-right: auto; }
         .proof-section .video-player.cinematic { aspect-ratio: 2.35/1; }
-        .proof-section .video-player.vlog { aspect-ratio: 16/9; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .proof-section .video-player .play-btn { width: 72px; height: 72px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .proof-section .video-player.vlog { aspect-ratio: 16/9; max-width: 840px; }
         .proof-section .video-nav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
         .proof-section .video-pill { padding: 10px 20px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; color: #fff; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
         .proof-section .video-pill:hover { background: rgba(255,255,255,0.15); }
@@ -154,9 +149,8 @@
         .host-content .credential-dot { width: 10px; height: 10px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 3px; }
         .host-content .credential span { font-size: 17px; font-weight: 500; }
         .host-content .quote { font-size: 17px; color: #b8b8c8; font-style: italic; border-left: 3px solid #ff6b6b; padding-left: 24px; line-height: 1.6; }
-        .host-video { background: #f5f0eb; display: flex; align-items: center; justify-content: center; padding: 60px; }
-        .host-video-inner { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 100%); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; position: relative; overflow: hidden; }
-        .host-video .play-btn { width: 72px; height: 72px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+        .host-video { background: linear-gradient(135deg, #1a1a2e 0%, #0f0a1e 100%); display: flex; align-items: center; justify-content: center; padding: 60px; }
+        .host-video-inner { width: 100%; aspect-ratio: 16/9; border-radius: 20px; position: relative; overflow: hidden; }
         .host-video-text { color: #fff; font-size: 17px; font-weight: 500; }
 
         /* Pricing Section */
