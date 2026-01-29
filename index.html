@@ -235,15 +235,18 @@
         .apply-section .submit-btn { width: 100%; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); color: #0f0a1e; padding: 20px 36px; font-size: 17px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 14px; }
         .apply-section .form-footer { text-align: center; font-size: 15px; color: #7a7a8a; margin-top: 24px; }
         .apply-section .tier-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
-        .apply-section .tier-btn { padding: 20px 16px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; text-align: center; transition: all 0.2s; }
-        .apply-section .tier-btn .tier-label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; color: #ff6b6b; }
-        .apply-section .tier-btn .tier-name { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-        .apply-section .tier-btn .tier-price { font-size: 14px; color: rgba(255,255,255,0.7); }
-        .apply-section .tier-btn-foundation { background: linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%); }
-        .apply-section .tier-btn-amplify { background: linear-gradient(135deg, #2a1a1a 0%, #3d2828 100%); }
-        .apply-section .tier-btn-dominate { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 100%); }
-        .apply-section .tier-btn.selected { border-color: #ff6b6b; box-shadow: 0 0 20px rgba(255,107,107,0.3); transform: scale(1.02); }
-        .apply-section .tier-btn:hover:not(.selected) { transform: scale(1.01); opacity: 0.9; }
+        .apply-section .tier-btn { padding: 20px 16px; border-radius: 12px; border: 2px solid #e0e0e0; background: #fff; cursor: pointer; text-align: center; transition: all 0.2s; }
+        .apply-section .tier-btn .tier-label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; color: #9a9a9a; }
+        .apply-section .tier-btn .tier-name { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+        .apply-section .tier-btn .tier-price { font-size: 14px; color: #7a7a8a; }
+        .apply-section .tier-btn-foundation .tier-name { color: #2a4a5a; }
+        .apply-section .tier-btn-amplify .tier-name { color: #8b4a4a; }
+        .apply-section .tier-btn-dominate .tier-name { color: #4a3a6a; }
+        .apply-section .tier-btn.selected { border-color: #ff6b6b; box-shadow: 0 0 12px rgba(255,107,107,0.2); }
+        .apply-section .tier-btn-foundation.selected { border-color: #2a4a5a; box-shadow: 0 0 12px rgba(42,74,90,0.2); }
+        .apply-section .tier-btn-amplify.selected { border-color: #8b4a4a; box-shadow: 0 0 12px rgba(139,74,74,0.2); }
+        .apply-section .tier-btn-dominate.selected { border-color: #4a3a6a; box-shadow: 0 0 12px rgba(74,58,106,0.2); }
+        .apply-section .tier-btn:hover:not(.selected) { border-color: #c0c0c0; }
 
         /* Footer */
         footer { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); color: #fff; padding: 56px 48px; }
@@ -340,10 +343,9 @@
             .apply-section .form-row { grid-template-columns: 1fr; }
             .apply-section h2 { font-size: clamp(28px, 7vw, 38px); }
             .apply-section .tier-selector { grid-template-columns: 1fr; gap: 10px; }
-            .apply-section .tier-btn { padding: 16px; display: flex; align-items: center; gap: 16px; text-align: left; }
-            .apply-section .tier-btn .tier-label { margin-bottom: 0; }
-            .apply-section .tier-btn .tier-name { margin-bottom: 0; }
-            .apply-section .tier-btn .tier-info { display: flex; flex-direction: column; }
+            .apply-section .tier-btn { padding: 14px 16px; }
+            .apply-section .tier-btn .tier-label { margin-bottom: 4px; }
+            .apply-section .tier-btn .tier-name { margin-bottom: 2px; }
             footer .container { flex-direction: column; text-align: center; gap: 20px; }
         }
 
