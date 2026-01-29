@@ -197,10 +197,10 @@
         .pricing-section .card-foundation .check { color: #6bcb9e; }
         .pricing-section .card-foundation .btn-outline-gradient { background: linear-gradient(135deg, #1a3a4a, #2a4a5a) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; }
 
-        .pricing-section .card-amplify { background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%); }
-        .pricing-section .card-amplify .orb { top: -50px; right: -50px; background: radial-gradient(circle, rgba(116,185,255,0.25) 0%, transparent 70%); }
-        .pricing-section .card-amplify .check { color: #74b9ff; }
-        .pricing-section .card-amplify .btn-outline-gradient { background: linear-gradient(135deg, #1a2a3a, #2a3a4a) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; }
+        .pricing-section .card-amplify { background: linear-gradient(135deg, #2a1a1a 0%, #3d2828 100%); }
+        .pricing-section .card-amplify .orb { top: -50px; right: -50px; background: radial-gradient(circle, rgba(255,160,122,0.25) 0%, transparent 70%); }
+        .pricing-section .card-amplify .check { color: #ffa07a; }
+        .pricing-section .card-amplify .btn-outline-gradient { background: linear-gradient(135deg, #2a1a1a, #3d2828) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; }
 
         .pricing-section .card-dominate { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); }
         .pricing-section .card-dominate .orb { top: -40px; right: -40px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
@@ -234,6 +234,16 @@
         .apply-section .checkbox-label input { width: auto; accent-color: #ff6b6b; }
         .apply-section .submit-btn { width: 100%; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); color: #0f0a1e; padding: 20px 36px; font-size: 17px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 14px; }
         .apply-section .form-footer { text-align: center; font-size: 15px; color: #7a7a8a; margin-top: 24px; }
+        .apply-section .tier-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 32px; }
+        .apply-section .tier-btn { padding: 20px 16px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; text-align: center; transition: all 0.2s; }
+        .apply-section .tier-btn .tier-label { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; color: #ff6b6b; }
+        .apply-section .tier-btn .tier-name { font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .apply-section .tier-btn .tier-price { font-size: 14px; color: rgba(255,255,255,0.7); }
+        .apply-section .tier-btn-foundation { background: linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%); }
+        .apply-section .tier-btn-amplify { background: linear-gradient(135deg, #2a1a1a 0%, #3d2828 100%); }
+        .apply-section .tier-btn-dominate { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 100%); }
+        .apply-section .tier-btn.selected { border-color: #ff6b6b; box-shadow: 0 0 20px rgba(255,107,107,0.3); transform: scale(1.02); }
+        .apply-section .tier-btn:hover:not(.selected) { transform: scale(1.01); opacity: 0.9; }
 
         /* Footer */
         footer { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); color: #fff; padding: 56px 48px; }
@@ -329,6 +339,11 @@
             .apply-section form { padding: 32px 24px; }
             .apply-section .form-row { grid-template-columns: 1fr; }
             .apply-section h2 { font-size: clamp(28px, 7vw, 38px); }
+            .apply-section .tier-selector { grid-template-columns: 1fr; gap: 10px; }
+            .apply-section .tier-btn { padding: 16px; display: flex; align-items: center; gap: 16px; text-align: left; }
+            .apply-section .tier-btn .tier-label { margin-bottom: 0; }
+            .apply-section .tier-btn .tier-name { margin-bottom: 0; }
+            .apply-section .tier-btn .tier-info { display: flex; flex-direction: column; }
             footer .container { flex-direction: column; text-align: center; gap: 20px; }
         }
 
@@ -631,7 +646,7 @@
                             <li><span class="check">✓</span> Full transcripts</li>
                             <li><span class="check">✓</span> 2–3 week turnaround</li>
                         </ul>
-                        <a href="#apply" class="btn btn-outline-gradient">Select Foundation</a>
+                        <a href="#apply" class="btn btn-outline-gradient" onclick="setTimeout(() => selectTier('foundation'), 100)">Select Foundation</a>
                     </div>
                 </div>
 
@@ -653,7 +668,7 @@
                             <li><span class="check">✓</span> 10–15 short-form captions</li>
                             <li><span class="check">✓</span> 5–7 email newsletter drafts</li>
                         </ul>
-                        <a href="#apply" class="btn btn-outline-gradient">Select Amplify</a>
+                        <a href="#apply" class="btn btn-outline-gradient" onclick="setTimeout(() => selectTier('amplify'), 100)">Select Amplify</a>
                     </div>
                 </div>
 
@@ -674,7 +689,7 @@
                             <li><span class="check">✓</span> 30 total video clips (3× Amplify)</li>
                             <li><span class="check">✓</span> 60+ ready-to-post content pieces</li>
                         </ul>
-                        <a href="#apply" class="btn btn-accent">Select Dominate</a>
+                        <a href="#apply" class="btn btn-accent" onclick="setTimeout(() => selectTier('dominate'), 100)">Select Dominate</a>
                     </div>
                 </div>
             </div>
@@ -704,6 +719,24 @@
                 <p>Share a few details about your practice so we can confirm fit and follow up with available dates.</p>
             </div>
             <form name="recording-application" data-netlify="true">
+                <div class="tier-selector">
+                    <div class="tier-btn tier-btn-foundation" data-tier="foundation" onclick="selectTier('foundation')">
+                        <div class="tier-label">Tier 1</div>
+                        <div class="tier-name">Foundation</div>
+                        <div class="tier-price">$7,500</div>
+                    </div>
+                    <div class="tier-btn tier-btn-amplify" data-tier="amplify" onclick="selectTier('amplify')">
+                        <div class="tier-label">Tier 2</div>
+                        <div class="tier-name">Amplify</div>
+                        <div class="tier-price">$10,500</div>
+                    </div>
+                    <div class="tier-btn tier-btn-dominate" data-tier="dominate" onclick="selectTier('dominate')">
+                        <div class="tier-label">Tier 3</div>
+                        <div class="tier-name">Dominate</div>
+                        <div class="tier-price">$13,500</div>
+                    </div>
+                </div>
+                <input type="hidden" name="package" id="package-input" value="">
                 <div class="form-row">
                     <div>
                         <label>Full Name *</label>
@@ -738,16 +771,6 @@
                         <label class="checkbox-label"><input type="checkbox" name="focus[]" value="Ortho"> Ortho</label>
                         <label class="checkbox-label"><input type="checkbox" name="focus[]" value="Other"> Other</label>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>Which package interests you most?</label>
-                    <select name="package">
-                        <option value="">Select a package...</option>
-                        <option value="foundation">Foundation — $7,500</option>
-                        <option value="amplify">Amplify — $10,500</option>
-                        <option value="dominate">Dominate — $13,500</option>
-                        <option value="not-sure">Not sure yet</option>
-                    </select>
                 </div>
                 <div class="form-group">
                     <label>What would make this a home run for you?</label>
@@ -810,6 +833,18 @@
             iframe.allow = 'autoplay; fullscreen';
             iframe.allowFullscreen = true;
             element.appendChild(iframe);
+        }
+
+        function selectTier(tier) {
+            // Remove selected from all buttons
+            document.querySelectorAll('.tier-btn').forEach(btn => btn.classList.remove('selected'));
+            // Add selected to clicked button
+            const selectedBtn = document.querySelector(`.tier-btn[data-tier="${tier}"]`);
+            if (selectedBtn) {
+                selectedBtn.classList.add('selected');
+            }
+            // Update hidden input
+            document.getElementById('package-input').value = tier;
         }
     </script>
 
