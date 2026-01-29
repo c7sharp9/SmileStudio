@@ -31,14 +31,16 @@
         .hero { min-height: 100vh; background: radial-gradient(at 20% 20%, #4a2c6a 0%, transparent 50%), radial-gradient(at 80% 80%, #2d1b4e 0%, transparent 50%), #0f0a1e; color: #fff; display: flex; flex-direction: column; justify-content: center; padding: 140px 48px 100px; position: relative; overflow: hidden; }
         .hero .orb1 { position: absolute; top: 10%; right: 20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); filter: blur(60px); }
         .hero .orb2 { position: absolute; bottom: 20%; left: 10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(116,185,255,0.2) 0%, transparent 70%); filter: blur(60px); }
-        .hero-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .hero-content { }
+        .hero-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .hero-header { text-align: center; margin-bottom: 60px; }
         .hero .tagline { display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
-        .hero h1 { font-size: clamp(52px, 8vw, 96px); font-weight: 700; line-height: 1.05; letter-spacing: -3px; margin-bottom: 32px; max-width: 900px; }
-        .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+        .hero h1 { font-size: clamp(48px, 7vw, 84px); font-weight: 700; line-height: 1.05; letter-spacing: -3px; margin: 0 auto; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .hero-content { }
+        .hero .subheadline { font-size: 20px; color: #b8b8c8; line-height: 1.7; margin-bottom: 36px; }
+        .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
         .hero .scarcity { font-size: 15px; color: #7a7a8a; font-style: italic; }
-        .hero-video { display: flex; flex-direction: column; justify-content: center; }
-        .hero-video .subheadline { font-size: 19px; color: #b8b8c8; line-height: 1.7; margin-bottom: 32px; }
+        .hero-video { }
         .hero-video-inner { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; aspect-ratio: 16/10; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
         .hero-video-inner:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.2); }
         .hero-video-orb { position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); filter: blur(40px); }
@@ -46,6 +48,14 @@
         .hero-video .play-btn svg { width: 28px; height: 28px; margin-left: 4px; }
         .hero-video-text { color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 6px; position: relative; z-index: 1; text-align: center; }
         .hero-video-subtext { color: #b8b8c8; font-size: 15px; position: relative; z-index: 1; }
+
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; }
+        .lightbox.active { display: flex; }
+        .lightbox-content { position: relative; width: 90%; max-width: 1100px; aspect-ratio: 16/9; }
+        .lightbox-content iframe { width: 100%; height: 100%; border: none; border-radius: 12px; }
+        .lightbox-close { position: absolute; top: -50px; right: 0; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; color: #fff; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
 
         /* Bento Grid Section */
         .bento-section { padding: 100px 48px; background: #faf8f5; }
@@ -252,28 +262,40 @@
         <div class="orb1"></div>
         <div class="orb2"></div>
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-header">
                 <div class="tagline gradient-text">The Modern Dental Interview Show</div>
                 <h1>Patients Pick Dentists <span class="gradient-text">They Know.</span></h1>
-                <div class="ctas">
-                    <a href="#apply" class="btn-primary">Apply for a Recording Date <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-                    <a href="#pricing" class="btn-secondary">See Packages & Pricing</a>
-                </div>
-                <p class="scarcity">We film with only 3–5 dentists per month. Recording dates are by application.</p>
             </div>
-            <div class="hero-video">
-                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One afternoon, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market.</p>
-                <a href="https://vimeo.com/865823334" target="_blank" class="hero-video-inner">
-                    <div class="hero-video-orb"></div>
-                    <div class="play-btn">
-                        <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One afternoon, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market.</p>
+                    <div class="ctas">
+                        <a href="#apply" class="btn-primary">Apply for a Recording Date <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+                        <a href="#pricing" class="btn-secondary">See Packages & Pricing</a>
                     </div>
-                    <div class="hero-video-text">See the quality of ReFrame's production</div>
-                    <div class="hero-video-subtext">Watch our sizzle reel</div>
-                </a>
+                    <p class="scarcity">We film with only 3–5 dentists per month. Recording dates are by application.</p>
+                </div>
+                <div class="hero-video">
+                    <div class="hero-video-inner" onclick="openLightbox('865823334')">
+                        <div class="hero-video-orb"></div>
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
+                        </div>
+                        <div class="hero-video-text">See the quality of ReFrame's production</div>
+                        <div class="hero-video-subtext">Watch our sizzle reel</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Video Lightbox -->
+    <div class="lightbox" id="video-lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+            <iframe id="lightbox-video" src="" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- Bento Grid - What You Get -->
     <section class="bento-section">
@@ -649,6 +671,35 @@
             <div class="copyright">© 2026 SmileStudio.tv. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        function openLightbox(videoId) {
+            const lightbox = document.getElementById('video-lightbox');
+            const iframe = document.getElementById('lightbox-video');
+            iframe.src = 'https://player.vimeo.com/video/' + videoId + '?autoplay=1&badge=0&autopause=0&player_id=0&app_id=58479';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox(event) {
+            if (event.target.classList.contains('lightbox') || event.target.classList.contains('lightbox-close')) {
+                const lightbox = document.getElementById('video-lightbox');
+                const iframe = document.getElementById('lightbox-video');
+                lightbox.classList.remove('active');
+                iframe.src = '';
+                document.body.style.overflow = '';
+            }
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const lightbox = document.getElementById('video-lightbox');
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.getElementById('lightbox-video').src = '';
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
