@@ -297,11 +297,11 @@
             nav .nav-links { gap: 0; }
             .hero { padding: 110px 24px 50px; }
             .hero-container { grid-template-columns: 1fr; gap: 40px; }
-            .hero h1 { font-size: clamp(36px, 10vw, 52px); margin-bottom: 24px; }
+            .hero h1 { font-size: clamp(42px, 12vw, 58px); margin-bottom: 24px; letter-spacing: -2px; }
             .hero .tagline { font-size: 12px; margin-bottom: 16px; }
             .hero .subheadline { font-size: 17px; margin-bottom: 28px; }
-            .hero .ctas { flex-direction: column; align-items: stretch; }
-            .hero .ctas .btn-primary, .hero .ctas .btn-secondary { width: 100%; justify-content: center; }
+            .hero .ctas { flex-direction: row; gap: 12px; }
+            .hero .ctas .btn-primary, .hero .ctas .btn-secondary { flex: 1; justify-content: center; padding: 16px 20px; font-size: 15px; }
             .hero-video-player { aspect-ratio: 16/9; }
             .hero-video-player .video-title { font-size: 15px; }
             .hero-video-player .video-subtitle { font-size: 13px; }
@@ -318,31 +318,35 @@
             .bento-section .card-num { font-size: 42px; }
             .why-section { padding: 60px 24px; }
             .why-section .features { grid-template-columns: 1fr; gap: 16px; }
-            .why-section h2 { font-size: clamp(32px, 8vw, 42px); }
+            .why-section h2 { font-size: clamp(36px, 9vw, 48px); }
             .how-section { padding: 60px 24px; }
             .how-section .steps { grid-template-columns: 1fr; gap: 16px; }
             .how-section .step { min-height: auto; padding: 32px 24px; }
-            .how-section h2 { font-size: clamp(32px, 8vw, 42px); }
+            .how-section h2 { font-size: clamp(36px, 9vw, 48px); }
             .pricing-section { padding: 60px 24px; }
             .pricing-section .cards { grid-template-columns: 1fr; }
             .pricing-section .card { padding: 36px 28px; }
-            .pricing-section h2 { font-size: clamp(32px, 8vw, 42px); }
+            .pricing-section h2 { font-size: clamp(36px, 9vw, 48px); }
             .proof-section { padding: 60px 24px; }
-            .proof-section h2 { font-size: clamp(28px, 7vw, 38px); }
-            .proof-section .video-player.cinematic { aspect-ratio: 16/9; }
+            .proof-section h2 { font-size: clamp(32px, 8vw, 44px); }
+            .proof-section .video-tabs { padding: 4px; margin-bottom: 24px; }
+            .proof-section .video-tab { padding: 10px 20px; font-size: 14px; }
+            .proof-section .video-player.cinematic { aspect-ratio: 1.85/1; max-width: 100%; }
             .proof-section .video-nav { gap: 8px; }
             .proof-section .video-pill { padding: 8px 14px; font-size: 13px; }
             .host-section { min-height: auto; }
             .host-content { padding: 60px 24px; }
-            .host-content h2 { font-size: clamp(36px, 10vw, 52px); }
+            .host-content h2 { font-size: clamp(42px, 12vw, 58px); }
             .host-video { padding: 32px 24px; }
             .scarcity-section { padding: 60px 24px; }
-            .scarcity-section h2 { font-size: clamp(28px, 7vw, 38px); }
+            .scarcity-section h2 { font-size: clamp(32px, 8vw, 44px); }
             .scarcity-section .bullets { flex-direction: column; gap: 16px; align-items: center; }
             .apply-section { padding: 60px 24px; }
             .apply-section form { padding: 32px 24px; }
             .apply-section .form-row { grid-template-columns: 1fr; }
-            .apply-section h2 { font-size: clamp(28px, 7vw, 38px); }
+            .apply-section h2 { font-size: clamp(32px, 8vw, 44px); }
+            .apply-section .checkboxes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .apply-section .checkbox-label { padding: 10px 14px; font-size: 14px; justify-content: center; }
             .apply-section .tier-selector { grid-template-columns: 1fr; gap: 10px; }
             .apply-section .tier-btn { padding: 14px 16px; }
             .apply-section .tier-btn .tier-label { margin-bottom: 4px; }
@@ -356,7 +360,9 @@
             nav .logo { font-size: 18px; }
             nav .apply-btn { padding: 10px 18px; font-size: 14px; }
             .hero { padding: 100px 20px 40px; }
-            .hero h1 { font-size: 32px; letter-spacing: -2px; }
+            .hero h1 { font-size: 38px; letter-spacing: -2px; }
+            .hero .ctas { flex-direction: column; }
+            .hero .ctas .btn-primary, .hero .ctas .btn-secondary { width: 100%; }
             .btn-primary, .btn-secondary { padding: 16px 24px; font-size: 15px; }
             .bento-section .card { padding: 20px; }
             .bento-section .card-num { font-size: 36px; }
@@ -426,7 +432,6 @@
                         <div class="card-label">Authentic</div>
                         <div class="card-text">No scripts. Real conversations that reveal your personality and expertise.</div>
                     </div>
-                    <div class="card-num">01</div>
                 </div>
 
                 <!-- Card 2 - Production -->
@@ -436,7 +441,6 @@
                         <div class="card-label">Production</div>
                         <div class="card-text">Custom-branded virtual sets that rival network television.</div>
                     </div>
-                    <div class="card-num" style="opacity: 0.4;">02</div>
                 </div>
 
                 <!-- Card 3 - Episodes -->
@@ -458,7 +462,6 @@
                         <div class="card-label">Content Hub</div>
                         <div class="card-text">Instagram carousels, LinkedIn posts, email templates — all delivered ready to use.</div>
                     </div>
-                    <div class="card-num" style="opacity: 0.15;">03</div>
                 </div>
 
                 <!-- Card 6 - Content Pieces -->
