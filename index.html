@@ -35,14 +35,17 @@
         .hero-content { }
         .hero .tagline { display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
         .hero h1 { font-size: clamp(52px, 8vw, 96px); font-weight: 700; line-height: 1.05; letter-spacing: -3px; margin-bottom: 32px; max-width: 900px; }
-        .hero .subheadline { font-size: 22px; color: #b8b8c8; max-width: 620px; line-height: 1.6; margin-bottom: 28px; }
-        .hero .bullets { display: flex; flex-wrap: wrap; gap: 28px; margin-bottom: 44px; }
-        .hero .bullet { display: flex; align-items: center; gap: 10px; font-size: 16px; color: #b8b8c8; }
-        .hero .bullet-dot { width: 8px; height: 8px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; }
         .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
         .hero .scarcity { font-size: 15px; color: #7a7a8a; font-style: italic; }
-        .hero-video { display: flex; align-items: center; justify-content: center; }
-        .hero-video-inner { border-radius: 20px; position: relative; overflow: hidden; aspect-ratio: 16/9; width: 100%; }
+        .hero-video { display: flex; flex-direction: column; justify-content: center; }
+        .hero-video .subheadline { font-size: 19px; color: #b8b8c8; line-height: 1.7; margin-bottom: 32px; }
+        .hero-video-inner { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; aspect-ratio: 16/10; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
+        .hero-video-inner:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.2); }
+        .hero-video-orb { position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); filter: blur(40px); }
+        .hero-video .play-btn { width: 80px; height: 80px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative; z-index: 1; }
+        .hero-video .play-btn svg { width: 28px; height: 28px; margin-left: 4px; }
+        .hero-video-text { color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 6px; position: relative; z-index: 1; text-align: center; }
+        .hero-video-subtext { color: #b8b8c8; font-size: 15px; position: relative; z-index: 1; }
 
         /* Bento Grid Section */
         .bento-section { padding: 100px 48px; background: #faf8f5; }
@@ -252,7 +255,6 @@
             <div class="hero-content">
                 <div class="tagline gradient-text">The Modern Dental Interview Show</div>
                 <h1>Patients Pick Dentists <span class="gradient-text">They Know.</span></h1>
-                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One afternoon, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market.</p>
                 <div class="ctas">
                     <a href="#apply" class="btn-primary">Apply for a Recording Date <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
                     <a href="#pricing" class="btn-secondary">See Packages & Pricing</a>
@@ -260,9 +262,15 @@
                 <p class="scarcity">We film with only 3–5 dentists per month. Recording dates are by application.</p>
             </div>
             <div class="hero-video">
-                <div class="hero-video-inner">
-                    <iframe src="https://player.vimeo.com/video/865823334?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:24px;" title="ReFrame Sizzle Reel"></iframe>
-                </div>
+                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One afternoon, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market.</p>
+                <a href="https://vimeo.com/865823334" target="_blank" class="hero-video-inner">
+                    <div class="hero-video-orb"></div>
+                    <div class="play-btn">
+                        <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
+                    </div>
+                    <div class="hero-video-text">See the quality of ReFrame's production</div>
+                    <div class="hero-video-subtext">Watch our sizzle reel</div>
+                </a>
             </div>
         </div>
     </section>
