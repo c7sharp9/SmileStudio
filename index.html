@@ -39,8 +39,8 @@
         .hero .subheadline { font-size: 20px; color: #b8b8c8; line-height: 1.7; margin-bottom: 36px; }
         .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
         .hero .scarcity { font-size: 15px; color: #7a7a8a; font-style: italic; }
-        .hero-video { }
-        .hero-video-player { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; aspect-ratio: 9/16; max-height: 480px; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero-video { justify-self: end; }
+        .hero-video-player { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; aspect-ratio: 9/16; max-height: 560px; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .hero-video-player:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.2); }
         .hero-video-player.playing { cursor: default; }
         .hero-video-player.playing:hover { transform: none; }
@@ -69,6 +69,7 @@
         .bento-section .card-label { font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; }
         .bento-section .card-text { font-size: 19px; font-weight: 500; line-height: 1.5; }
         .bento-section .card-num { font-family: 'Sora', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -2px; }
+        .bento-section .card-bottom-label { font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; text-transform: uppercase; opacity: 0.5; }
 
         /* Explicit grid positions for symmetrical bento layout */
         .bento-section .card-1 { grid-column: 1 / span 4; grid-row: 1 / span 2; background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 100%); color: #fff; }
@@ -321,6 +322,7 @@
             .bento-section .card-5 { grid-column: 1 / span 2; }
             .bento-section .card-6 { grid-column: 1 / span 2; }
             .bento-section .card-num { font-size: 42px; }
+            .bento-section .card-bottom-label { font-size: 20px; }
             .why-section { padding: 60px 24px; }
             .why-section .features { grid-template-columns: 1fr; gap: 16px; }
             .why-section h2 { font-size: clamp(36px, 9vw, 48px); }
@@ -372,6 +374,7 @@
             .bento-section .card { padding: 20px; }
             .bento-section .card-num { font-size: 36px; }
             .bento-section .card-text { font-size: 16px; }
+            .bento-section .card-bottom-label { font-size: 16px; }
             .hero-video-player { max-width: 240px; }
         }
     </style>
@@ -411,8 +414,8 @@
                         <div class="play-btn">
                             <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
                         </div>
-                        <div class="video-title">From the Digital by Design Podcast</div>
-                        <div class="video-subtitle">A sample of ReFrame's dental production</div>
+                        <div class="video-title">See ReFrame in Action</div>
+                        <div class="video-subtitle">Social Media Clip from Digital by Design</div>
                     </div>
                 </div>
             </div>
@@ -434,46 +437,40 @@
                 <!-- Card 1 - Authentic (tall) -->
                 <div class="card card-1">
                     <div class="card-orb"></div>
-                    <div>
-                        <div class="card-label">Authentic</div>
-                        <div class="card-text">No scripts. Real conversations that reveal your personality and expertise.</div>
-                    </div>
+                    <div class="card-text">No scripts. Real conversations that reveal your personality and expertise.</div>
+                    <div class="card-bottom-label">Authentic</div>
                 </div>
 
                 <!-- Card 2 - Production -->
                 <div class="card card-2">
                     <div class="card-orb"></div>
-                    <div>
-                        <div class="card-label">Production</div>
-                        <div class="card-text">Custom-branded virtual sets that rival network television.</div>
-                    </div>
+                    <div class="card-text">Custom-branded virtual sets that rival network television quality.</div>
+                    <div class="card-bottom-label">Production</div>
                 </div>
 
                 <!-- Card 3 - Episodes -->
                 <div class="card card-3">
                     <div class="card-num">2</div>
-                    <div class="card-label">Episodes Per Session</div>
+                    <div class="card-bottom-label">Episodes Per Session</div>
                 </div>
 
                 <!-- Card 4 - Clips -->
                 <div class="card card-4">
                     <div class="card-num">30</div>
-                    <div class="card-label">Video Clips</div>
+                    <div class="card-bottom-label">Video Clips</div>
                 </div>
 
-                <!-- Card 5 - Content Hub -->
+                <!-- Card 5 - Content Library -->
                 <div class="card card-5">
                     <div class="card-orb"></div>
-                    <div>
-                        <div class="card-label">Content Hub</div>
-                        <div class="card-text">Instagram carousels, LinkedIn posts, email templates — all delivered ready to use.</div>
-                    </div>
+                    <div class="card-text">Instagram carousels, LinkedIn posts, email templates, all delivered ready to use.</div>
+                    <div class="card-bottom-label">Content Library</div>
                 </div>
 
                 <!-- Card 6 - Content Pieces -->
                 <div class="card card-6">
                     <div class="card-num">50+</div>
-                    <div class="card-label">Content Pieces</div>
+                    <div class="card-bottom-label">Content Pieces</div>
                 </div>
             </div>
         </div>
