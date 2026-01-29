@@ -178,7 +178,7 @@
         .pricing-section .card { padding: 48px; display: flex; flex-direction: column; border-radius: 24px; position: relative; overflow: hidden; color: #fff; }
         .pricing-section .card .orb { position: absolute; width: 150px; height: 150px; filter: blur(30px); }
         .pricing-section .card .inner { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; }
-        .pricing-section .card .tier { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; margin-bottom: 10px; }
+        .pricing-section .card .tier { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; color: #ff6b6b; }
         .pricing-section .card .name { font-family: 'Sora', sans-serif; font-size: 30px; font-weight: 700; margin-bottom: 10px; }
         .pricing-section .card .price { font-family: 'Sora', sans-serif; font-size: 52px; font-weight: 700; margin-bottom: 18px; }
         .pricing-section .card .desc { font-size: 16px; opacity: 0.75; margin-bottom: 28px; line-height: 1.55; }
@@ -189,18 +189,20 @@
         .pricing-section .card .includes-intro { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.6; margin-bottom: 18px; }
         .pricing-section .card .btn { padding: 18px 32px; font-size: 16px; font-weight: 600; cursor: pointer; text-align: center; border-radius: 10px; display: block; }
         .pricing-section .card .btn-outline { border: 1px solid rgba(255,255,255,0.3); background: transparent; color: #fff; }
+        .pricing-section .card .btn-outline-gradient { position: relative; background: linear-gradient(135deg, #0f0a1e, #0f0a1e) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; border: 2px solid transparent; color: #fff; }
         .pricing-section .card .btn-accent { border: none; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); color: #0f0a1e; }
 
         .pricing-section .card-foundation { background: linear-gradient(135deg, #1a3a4a 0%, #2a4a5a 100%); }
         .pricing-section .card-foundation .orb { bottom: -40px; right: -40px; background: radial-gradient(circle, rgba(107,203,158,0.25) 0%, transparent 70%); }
         .pricing-section .card-foundation .check { color: #6bcb9e; }
+        .pricing-section .card-foundation .btn-outline-gradient { background: linear-gradient(135deg, #1a3a4a, #2a4a5a) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; }
 
-        .pricing-section .card-amplify { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); }
-        .pricing-section .card-amplify .orb { top: -50px; right: -50px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
-        .pricing-section .card-amplify .tier { opacity: 1; }
-        .pricing-section .card-amplify .check { color: #ff6b6b; }
+        .pricing-section .card-amplify { background: linear-gradient(135deg, #1a2a3a 0%, #2a3a4a 100%); }
+        .pricing-section .card-amplify .orb { top: -50px; right: -50px; background: radial-gradient(circle, rgba(116,185,255,0.25) 0%, transparent 70%); }
+        .pricing-section .card-amplify .check { color: #74b9ff; }
+        .pricing-section .card-amplify .btn-outline-gradient { background: linear-gradient(135deg, #1a2a3a, #2a3a4a) padding-box, linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%) border-box; }
 
-        .pricing-section .card-dominate { background: linear-gradient(135deg, #2a1a1a 0%, #4a2a2a 100%); }
+        .pricing-section .card-dominate { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); }
         .pricing-section .card-dominate .orb { top: -40px; right: -40px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
         .pricing-section .card-dominate .check { color: #ff6b6b; }
 
@@ -629,7 +631,7 @@
                             <li><span class="check">✓</span> Full transcripts</li>
                             <li><span class="check">✓</span> 2–3 week turnaround</li>
                         </ul>
-                        <a href="#apply" class="btn btn-outline">Select Foundation</a>
+                        <a href="#apply" class="btn btn-outline-gradient">Select Foundation</a>
                     </div>
                 </div>
 
@@ -637,7 +639,7 @@
                 <div class="card card-amplify">
                     <div class="orb"></div>
                     <div class="inner">
-                        <div class="tier gradient-text">Tier 2</div>
+                        <div class="tier">Tier 2</div>
                         <div class="name">Amplify</div>
                         <div class="price">$10,500</div>
                         <div class="desc">For practices that want a complete, done-for-you content library from one session.</div>
@@ -651,7 +653,7 @@
                             <li><span class="check">✓</span> 10–15 short-form captions</li>
                             <li><span class="check">✓</span> 5–7 email newsletter drafts</li>
                         </ul>
-                        <a href="#apply" class="btn btn-accent">Select Amplify</a>
+                        <a href="#apply" class="btn btn-outline-gradient">Select Amplify</a>
                     </div>
                 </div>
 
@@ -672,7 +674,7 @@
                             <li><span class="check">✓</span> 30 total video clips (3× Amplify)</li>
                             <li><span class="check">✓</span> 60+ ready-to-post content pieces</li>
                         </ul>
-                        <a href="#apply" class="btn btn-outline">Select Dominate</a>
+                        <a href="#apply" class="btn btn-accent">Select Dominate</a>
                     </div>
                 </div>
             </div>
