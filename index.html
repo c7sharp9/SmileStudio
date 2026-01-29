@@ -174,7 +174,7 @@
         .pricing-section .header { text-align: center; margin-bottom: 70px; }
         .pricing-section h2 { font-size: clamp(38px, 5vw, 54px); font-weight: 700; line-height: 1.1; letter-spacing: -2px; margin-bottom: 20px; }
         .pricing-section .header p { font-size: 20px; color: #6a6a7a; max-width: 720px; margin: 0 auto; }
-        .pricing-section .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+        .pricing-section .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
         .pricing-section .card { padding: 48px; display: flex; flex-direction: column; border-radius: 24px; position: relative; overflow: hidden; color: #fff; }
         .pricing-section .card .orb { position: absolute; width: 150px; height: 150px; filter: blur(30px); }
         .pricing-section .card .inner { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; }
@@ -194,8 +194,7 @@
         .pricing-section .card-foundation .orb { bottom: -40px; right: -40px; background: radial-gradient(circle, rgba(107,203,158,0.25) 0%, transparent 70%); }
         .pricing-section .card-foundation .check { color: #6bcb9e; }
 
-        .pricing-section .card-amplify { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); transform: scale(1.03); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); }
-        .pricing-section .card-amplify .badge { position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); color: #0f0a1e; padding: 10px 24px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-bottom-left-radius: 14px; }
+        .pricing-section .card-amplify { background: linear-gradient(135deg, #0f0a1e 0%, #2d1b4e 50%, #1a1a2e 100%); }
         .pricing-section .card-amplify .orb { top: -50px; right: -50px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
         .pricing-section .card-amplify .tier { opacity: 1; }
         .pricing-section .card-amplify .check { color: #ff6b6b; }
@@ -635,7 +634,6 @@
 
                 <!-- Amplify -->
                 <div class="card card-amplify">
-                    <div class="badge">Recommended</div>
                     <div class="orb"></div>
                     <div class="inner">
                         <div class="tier gradient-text">Tier 2</div>
@@ -644,13 +642,13 @@
                         <div class="desc">For practices that want a complete, done-for-you content library from one session.</div>
                         <div class="divider"></div>
                         <ul>
-                            <li><span class="check">✓</span> Everything in Foundation</li>
-                            <li><span class="check">✓</span> 10 hand-edited video clips</li>
-                            <li><span class="check">✓</span> Full Content Hub access:</li>
-                            <li style="padding-left: 24px;">• 7–10 Instagram carousels</li>
-                            <li style="padding-left: 24px;">• 5–7 LinkedIn posts</li>
-                            <li style="padding-left: 24px;">• 10–15 short-form captions</li>
-                            <li style="padding-left: 24px;">• 5–7 email newsletter drafts</li>
+                            <li><span class="check">✓</span> <strong>Everything in Foundation, plus:</strong></li>
+                            <li><span class="check">✓</span> 10 hand-edited video clips for social</li>
+                            <li><span class="check">✓</span> Complete written content library:</li>
+                            <li style="padding-left: 28px; opacity: 0.85;">7–10 Instagram carousels</li>
+                            <li style="padding-left: 28px; opacity: 0.85;">5–7 LinkedIn posts</li>
+                            <li style="padding-left: 28px; opacity: 0.85;">10–15 short-form captions</li>
+                            <li style="padding-left: 28px; opacity: 0.85;">5–7 email newsletter drafts</li>
                         </ul>
                         <a href="#apply" class="btn btn-accent">Select Amplify</a>
                     </div>
@@ -666,13 +664,11 @@
                         <div class="desc">For practices that want to own their category online.</div>
                         <div class="divider"></div>
                         <ul>
-                            <li><span class="check">✓</span> Everything in Amplify</li>
-                            <li><span class="check">✓</span> 4-hour recording session</li>
-                            <li><span class="check">✓</span> Dedicated Hook Session</li>
-                            <li><span class="check">✓</span> 20 scripted social questions</li>
-                            <li><span class="check">✓</span> 30 total video clips</li>
+                            <li><span class="check">✓</span> <strong>Everything in Amplify, plus:</strong></li>
+                            <li><span class="check">✓</span> Extended 4-hour recording session</li>
+                            <li><span class="check">✓</span> Dedicated Hook Session: 20 short videos with pre-written hooks designed to grab attention and open curiosity loops</li>
+                            <li><span class="check">✓</span> 30 total video clips (3× Amplify)</li>
                             <li><span class="check">✓</span> 60+ written content pieces</li>
-                            <li><span class="check">✓</span> Personalized Content Hub</li>
                         </ul>
                         <a href="#apply" class="btn btn-outline">Select Dominate</a>
                     </div>
