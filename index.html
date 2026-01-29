@@ -34,21 +34,22 @@
         .hero-container { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .hero-content { }
         .hero .tagline { display: inline-block; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
-        .hero h1 { font-size: clamp(48px, 7vw, 80px); font-weight: 700; line-height: 1.05; letter-spacing: -3px; margin-bottom: 28px; }
-        .hero .subheadline { font-size: 18px; color: #b8b8c8; line-height: 1.7; margin-bottom: 32px; }
-        .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+        .hero h1 { font-size: clamp(52px, 8vw, 96px); font-weight: 700; line-height: 1.05; letter-spacing: -3px; margin-bottom: 32px; }
+        .hero .subheadline { font-size: 20px; color: #b8b8c8; line-height: 1.7; margin-bottom: 36px; }
+        .hero .ctas { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
         .hero .scarcity { font-size: 15px; color: #7a7a8a; font-style: italic; }
         .hero-video { }
-        .hero-video-player { background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; aspect-ratio: 16/9; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
-        .hero-video-player:hover { transform: scale(1.01); border-color: rgba(255,255,255,0.2); }
+        .hero-video-player { background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; aspect-ratio: 16/9; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero-video-player:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.2); }
         .hero-video-player.playing { cursor: default; }
         .hero-video-player.playing:hover { transform: none; }
-        .hero-video-player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px; }
-        .hero-video-player .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .hero-video-player .play-btn svg { width: 24px; height: 24px; margin-left: 3px; }
-        .hero-video-caption { margin-top: 20px; }
-        .hero-video-caption h3 { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 6px; }
-        .hero-video-caption p { font-size: 15px; color: #9a9aaa; line-height: 1.5; }
+        .hero-video-player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; }
+        .hero-video-player .video-orb { position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); filter: blur(40px); }
+        .hero-video-player .play-btn { width: 72px; height: 72px; background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; position: relative; z-index: 1; }
+        .hero-video-player .play-btn svg { width: 26px; height: 26px; margin-left: 4px; }
+        .hero-video-player .video-title { color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 4px; position: relative; z-index: 1; text-align: center; }
+        .hero-video-player .video-subtitle { color: #b8b8c8; font-size: 14px; position: relative; z-index: 1; }
+        .hero-video-player .thumbnail-content { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1; }
 
         /* Lightbox */
         .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; }
@@ -275,13 +276,14 @@
             </div>
             <div class="hero-video">
                 <div class="hero-video-player" id="hero-video-player" onclick="playHeroVideo(this)">
-                    <div class="play-btn">
-                        <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
+                    <div class="video-orb"></div>
+                    <div class="thumbnail-content">
+                        <div class="play-btn">
+                            <svg viewBox="0 0 24 24" fill="#0f0a1e"><polygon points="5,3 19,12 5,21"/></svg>
+                        </div>
+                        <div class="video-title">See the quality of ReFrame's production</div>
+                        <div class="video-subtitle">Watch our sizzle reel</div>
                     </div>
-                </div>
-                <div class="hero-video-caption">
-                    <h3>See the production quality</h3>
-                    <p>One afternoon in the studio. A library of content that positions you as the authority.</p>
                 </div>
             </div>
         </div>
