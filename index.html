@@ -69,6 +69,7 @@
         .bento-section .card-label { font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; }
         .bento-section .card-text { font-size: 19px; font-weight: 500; line-height: 1.5; }
         .bento-section .card-num { font-family: 'Sora', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -2px; }
+        .bento-section .card-num .up-to { font-size: 18px; font-weight: 600; letter-spacing: 0; display: block; opacity: 0.7; margin-bottom: 4px; }
         .bento-section .card-bottom-label { font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 700; letter-spacing: -1px; text-transform: uppercase; opacity: 0.5; }
 
         /* Explicit grid positions for symmetrical bento layout */
@@ -208,6 +209,12 @@
         .pricing-section .card-dominate .orb { top: -40px; right: -40px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
         .pricing-section .card-dominate .check { color: #ff6b6b; }
 
+        /* Guarantee Section */
+        .guarantee-section { padding: 100px 48px; background: #fff; }
+        .guarantee-section .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .guarantee-section h2 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -1.5px; margin-bottom: 24px; }
+        .guarantee-section p { font-size: 19px; color: #5a5a6a; line-height: 1.7; }
+
         /* Scarcity CTA */
         .scarcity-section { background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); padding: 110px 48px; text-align: center; position: relative; overflow: hidden; }
         .scarcity-section .orb { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%); filter: blur(60px); }
@@ -345,6 +352,8 @@
             .host-content { padding: 60px 24px; }
             .host-content h2 { font-size: clamp(42px, 12vw, 58px); }
             .host-video { padding: 32px 24px; }
+            .guarantee-section { padding: 60px 24px; }
+            .guarantee-section h2 { font-size: clamp(26px, 7vw, 36px); }
             .scarcity-section { padding: 60px 24px; }
             .scarcity-section h2 { font-size: clamp(32px, 8vw, 44px); }
             .scarcity-section .bullets { flex-direction: column; gap: 16px; align-items: center; }
@@ -401,7 +410,7 @@
             <div class="hero-content">
                 <div class="tagline gradient-text">The Modern Dental Interview Show</div>
                 <h1>Patients Pick Dentists <span class="gradient-text">They Know.</span></h1>
-                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One recording session, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market.</p>
+                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One recording session, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market. So when patients call, they already feel like they know you—and they're halfway to yes.</p>
                 <div class="ctas">
                     <a href="#apply" class="btn-primary">Apply for Session <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
                     <a href="#pricing" class="btn-secondary">See Packages & Pricing</a>
@@ -456,7 +465,7 @@
 
                 <!-- Card 4 - Clips -->
                 <div class="card card-4">
-                    <div class="card-num">30</div>
+                    <div class="card-num"><span class="up-to">Up to</span>30</div>
                     <div class="card-bottom-label">Video Clips</div>
                 </div>
 
@@ -469,7 +478,7 @@
 
                 <!-- Card 6 - Content Pieces -->
                 <div class="card card-6">
-                    <div class="card-num">50+</div>
+                    <div class="card-num"><span class="up-to">Up to</span>50+</div>
                     <div class="card-bottom-label">Content Pieces</div>
                 </div>
             </div>
@@ -702,6 +711,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee-section">
+        <div class="container">
+            <h2>Love Your Content Or <span class="gradient-text-warm">Get Your Money Back</span></h2>
+            <p>We're obsessive about the quality of what we create. If you're not genuinely happy with the quality of your SmileStudio.tv content when we deliver it—the way it looks, sounds, and represents you—we'll give you your money back.</p>
         </div>
     </section>
 
