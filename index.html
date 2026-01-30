@@ -209,11 +209,10 @@
         .pricing-section .card-dominate .orb { top: -40px; right: -40px; background: radial-gradient(circle, rgba(255,107,107,0.3) 0%, transparent 70%); }
         .pricing-section .card-dominate .check { color: #ff6b6b; }
 
-        /* Guarantee Section */
-        .guarantee-section { padding: 100px 48px; background: #fff; }
-        .guarantee-section .container { max-width: 800px; margin: 0 auto; text-align: center; }
-        .guarantee-section h2 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -1.5px; margin-bottom: 24px; }
-        .guarantee-section p { font-size: 19px; color: #5a5a6a; line-height: 1.7; }
+        /* Guarantee (inside pricing) */
+        .pricing-section .guarantee { text-align: center; margin-top: 60px; padding-top: 50px; border-top: 1px solid rgba(0,0,0,0.08); max-width: 700px; margin-left: auto; margin-right: auto; }
+        .pricing-section .guarantee h3 { font-size: clamp(24px, 4vw, 32px); font-weight: 700; line-height: 1.2; letter-spacing: -1px; margin-bottom: 16px; color: #0f0a1e; }
+        .pricing-section .guarantee p { font-size: 17px; color: #6a6a7a; line-height: 1.6; }
 
         /* Scarcity CTA */
         .scarcity-section { background: linear-gradient(135deg, #ff6b6b 0%, #ffa07a 50%, #ffd93d 100%); padding: 110px 48px; text-align: center; position: relative; overflow: hidden; }
@@ -352,8 +351,8 @@
             .host-content { padding: 60px 24px; }
             .host-content h2 { font-size: clamp(42px, 12vw, 58px); }
             .host-video { padding: 32px 24px; }
-            .guarantee-section { padding: 60px 24px; }
-            .guarantee-section h2 { font-size: clamp(26px, 7vw, 36px); }
+            .pricing-section .guarantee { margin-top: 40px; padding-top: 40px; }
+            .pricing-section .guarantee h3 { font-size: clamp(22px, 6vw, 28px); }
             .scarcity-section { padding: 60px 24px; }
             .scarcity-section h2 { font-size: clamp(32px, 8vw, 44px); }
             .scarcity-section .bullets { flex-direction: column; gap: 16px; align-items: center; }
@@ -460,7 +459,7 @@
                 <!-- Card 3 - Episodes -->
                 <div class="card card-3">
                     <div class="card-num">2</div>
-                    <div class="card-bottom-label">Episodes Per Session</div>
+                    <div class="card-bottom-label">Long-Form Episodes</div>
                 </div>
 
                 <!-- Card 4 - Clips -->
@@ -711,14 +710,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Guarantee -->
-    <section class="guarantee-section">
-        <div class="container">
-            <h2>Love Your Content Or <span class="gradient-text-warm">Get Your Money Back</span></h2>
-            <p>We're obsessive about the quality of what we create. If you're not genuinely happy with the quality of your SmileStudio.tv content when we deliver it—the way it looks, sounds, and represents you—we'll give you your money back.</p>
+            <div class="guarantee">
+                <h3>Love Your Content Or <span class="gradient-text-warm">Get Your Money Back</span></h3>
+                <p>We're obsessive about quality. If you're not genuinely happy with how your content looks, sounds, and represents you—we'll refund your investment.</p>
+            </div>
         </div>
     </section>
 
