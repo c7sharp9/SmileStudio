@@ -51,6 +51,7 @@
         .hero-video-player .video-title { color: #fff; font-size: 17px; font-weight: 600; margin-bottom: 4px; position: relative; z-index: 1; text-align: center; }
         .hero-video-player .video-subtitle { color: #b8b8c8; font-size: 14px; position: relative; z-index: 1; text-align: center; padding: 0 20px; }
         .hero-video-player .thumbnail-content { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1; }
+        .hero-video-player .thumbnail-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; border-radius: 20px; z-index: 0; }
 
         /* Lightbox */
         .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; align-items: center; justify-content: center; }
@@ -410,7 +411,7 @@
             <div class="hero-content">
                 <div class="tagline gradient-text">The Modern Dental Interview Show</div>
                 <h1>Patients Pick Dentists <span class="gradient-text">They Know.</span></h1>
-                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One recording session, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market. So when patients reach out, they've already decided you're the one.</p>
+                <p class="subheadline">SmileStudio.tv puts you on set with Dr. Mike DiTolla, a dentist who knows your world and knows how to make you shine on camera. One recording session, two flagship episodes, and you walk away with a content library that positions you as the trusted authority in your market. So when patients reach out, they've already decided you're the right choice for them.</p>
                 <div class="ctas">
                     <a href="#apply" class="btn-primary">Apply for Session <span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
                     <a href="#pricing" class="btn-secondary">See Packages & Pricing</a>
@@ -418,6 +419,7 @@
             </div>
             <div class="hero-video">
                 <div class="hero-video-player" id="hero-video-player" onclick="playHeroVideo(this)">
+                    <img src="images/frankie-thumb.jpg" alt="" class="thumbnail-bg">
                     <div class="video-orb"></div>
                     <div class="thumbnail-content">
                         <div class="play-btn">
@@ -642,8 +644,8 @@
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="header">
-                <h2>Three Packages. <span class="gradient-text-warm">One Recording Day.</span></h2>
-                <p>All packages include a custom-branded virtual set, professional production with Dr. Mike DiTolla, and two flagship episodes.</p>
+                <h2>Your Authority. <span class="gradient-text-warm">Captured in a Day.</span></h2>
+                <p>Choose from three strategic formats designed to position you as the trusted voice in your market.</p>
             </div>
             <div class="cards">
                 <!-- Foundation -->
